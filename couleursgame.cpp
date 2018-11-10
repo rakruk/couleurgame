@@ -32,7 +32,6 @@ int main() {
         << "Vous allez devoir repondre correctement " << NBPARTIES << " fois le plus rapidement possible\n"
         << "[ENTER] pour commencer...\n";
 
-    cout << sizeof(LIMITE);
     cin.get(); // Attendre une entrée
 
     clock_t begin_time = clock();
@@ -79,7 +78,7 @@ int main() {
     // Affichage du message de fin
     if (!failed) {
         cout << "Fini en " << seconds << " secondes\n";
-        for (int i = NBMEDAILLES-1; i > 0; i--) {
+        for (int i = NBMEDAILLES - 1; i > 0; i--) {
             if (seconds < LIMITE[i]) {
                 cout << ENCOURAGEMENTS[i];
                 cout << "Vous avez recu une medaille en " << MEDAILLES[i] << "\n";
@@ -91,5 +90,5 @@ int main() {
         cout << " Vous avez perdu... \n";
     }
 
-    cout << "====== fin du jeu ======\n";
+    cout << "=== fin du jeu =========\n";
 }

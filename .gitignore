@@ -1,7 +1,7 @@
 # Ajouts perso:
 *.sh
 ./results/
-*.clang_format
+.clang-format
 
 
 # Prerequisites
