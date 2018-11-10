@@ -13,9 +13,10 @@ const static int NBPARTIES = 15;
 const static int CODECOULEURS[6] = {9, 10, 11, 12, 13, 14};
 const static string NOMSCOULEURS[6] = {"bleu", "vert", "cyan", "rouge", "violet", "jaune"};
 
-const static int LIMITE[4] = {25, 20, 15, 12};
-const static string MEDAILLES[4] = {"bronze", "argent", "or", "platine"};
-const static string ENCOURAGEMENTS[4]
+const static int NBMEDAILLES = 4;
+const static int LIMITE[NBMEDAILLES] = {25, 20, 15, 12};
+const static string MEDAILLES[NBMEDAILLES] = {"bronze", "argent", "or", "platine"};
+const static string ENCOURAGEMENTS[NBMEDAILLES]
     = {"Ceci est un bon temps.\n", "Ceci est un tres bon temps!\n", "Bravo, c'est un super temps!\n", "Magnifique!\n"};
 
 int main() {
@@ -31,6 +32,7 @@ int main() {
         << "Vous allez devoir repondre correctement " << NBPARTIES << " fois le plus rapidement possible\n"
         << "[ENTER] pour commencer...\n";
 
+    cout << sizeof(LIMITE);
     cin.get(); // Attendre une entrée
 
     clock_t begin_time = clock();
@@ -77,7 +79,7 @@ int main() {
     // Affichage du message de fin
     if (!failed) {
         cout << "Fini en " << seconds << " secondes\n";
-        for (int i = LIMITE.size(); i > 0; i--) {
+        for (int i = NBMEDAILLES-1; i > 0; i--) {
             if (seconds < LIMITE[i]) {
                 cout << ENCOURAGEMENTS[i];
                 cout << "Vous avez recu une medaille en " << MEDAILLES[i] << "\n";
