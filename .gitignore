@@ -1,3 +1,9 @@
+# Ajouts perso:
+*.sh
+./results/
+*.clang_format
+
+
 # Prerequisites
 *.d
 
