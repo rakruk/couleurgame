@@ -1,4 +1,3 @@
-#include <conio.h>   // Pour getch()
 #include <iomanip>   // Pour setprecision()
 #include <iostream>  // Pour cout
 #include <string>    // Pour cout

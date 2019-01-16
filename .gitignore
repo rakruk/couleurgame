@@ -2,7 +2,7 @@
 *.sh
 ./results/
 .clang-format
-.gitignore
+*.gitignore
 .vscode
 
 # Prerequisites
